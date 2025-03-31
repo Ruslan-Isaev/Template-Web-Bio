@@ -24,51 +24,55 @@
 
     <div class="container">
         <header>
-            <div class="profile-image-container">
-                <img src="./assets/profile_picture.jpg" alt="ruis" class="profile-image">
-                <div class="glowing-border"></div>
-            </div>
-            <h1>RUIS</h1>
-            <p class="bio">Программист, инвестор и просто чилловый человек))</p>
+            <h1>Донат</h1>
+            <p class="bio">Добровольное пожертвование мне</p>
         </header>
+        <h3>Ton:</h3>
+<p><span class="copy-text" onclick="copyText(this)">UQA989xBd_-Fi5HhbTaFrpj5TxBLBIQ2Pi_CzoZfyUpcx_xR</span></p>
 
-        <nav>
-            <a href="https://github.com/Ruslan-Isaev" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://t.me/botapimaker" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-            <a href="https://github.com/Ruslan-isaev/modules" target="_blank"><i class="fab fa-telegram"></i> Модули</a>
-            <a href="https://discord.gg/Am8cYnBH" target="_blank"><i class="fab fa-discord"></i>
-                Discord</a>
-            <a href="#" target="_blank"><i class="fas fa-donate"></i> Донат</a>
-        </nav>
+<h3>BTC:</h3>
+<p><span class="copy-text" onclick="copyText(this)">bc1q4dafjpgnunkg2ha6u72n4x4qmdvyr9xtfw6uys</span></p>
 
-        <section class="projects">
-            <h2>Проекты</h2>
-            <div class="projects-toggle">
-                <button id="toggle-projects">
-                    <i class="fas fa-chevron-down"></i> Посмотреть проекты
-                </button>
-            </div>
-            <div class="project-grid" id="project-list">
-                <a href="https://t.me/RUIS_VlP" class="project-item" target="_blank">
-                    <div class="project-thumbnail">
-                        <img src="./assets/banner.jpg" alt="RUIS MODS">
-                    </div>
-                    <div class="project-details">
-                        <h3>RUIS MODS</h3>
-                        <p>Модули для Hikka и Heroku</p>
-<p>Все модули используются исключительно в развлекательных целях!</p>
-<p>При поддержке @hikka_mods</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+<h3>ETH:</h3>
+<p><span class="copy-text" onclick="copyText(this)">0xbDc631F3ec03E30195943070f964944F525DA52a</span></p>
+
+<h3>USDT (TRC20):</h3>
+<p><span class="copy-text" onclick="copyText(this)">TQ6ZBK2YBC9E8mGrv48W6XynwD2S4GuPQc</span></p>
+
+<h3>USDT (ERC20):</h3>
+<p><span class="copy-text" onclick="copyText(this)">0xbDc631F3ec03E30195943070f964944F525DA52a</span></p>
+<br />
+<hr />
+<br />
+<h2>Рубли</h2>
+<div class="container">
+    <iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=10IECS3EC1P.240130&" 
+        width="330" height="50" frameborder="0" allowtransparency="true" scrolling="no">
+    </iframe>
+</div>
 
         <footer>
             <p>&copy; 2025 RUIS. Все права защищены. Исходный код принадлежит <a href="https://codwiz.ru", style="color: #888;">CodWiz</a></p>
         </footer>
     </div>
+    <style>
+.copy-text {
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: monospace;
+    max-width: 70vw; /* Максимальная ширина — 70% экрана */
+    word-break: break-all; /* Обрезает слова и переносит их на новую строку */
+    display: inline-block; /* Чтобы max-width работал корректно */
+}
+.container {
+    text-align: center;
+}
+</style>
 
     <script>
+        function copyText(element) {
+    navigator.clipboard.writeText(element.textContent);
+}
         document.addEventListener('DOMContentLoaded', () => {
             const projectList = document.getElementById('project-list');
             const toggleProjectsButton = document.getElementById('toggle-projects');
